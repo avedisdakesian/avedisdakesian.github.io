@@ -27,3 +27,4 @@ while read -r url; do
 done < "$OUT/asset-urls.txt"
 
 echo "Saved $(ls "$OUT/assets" | wc -l) files"
+

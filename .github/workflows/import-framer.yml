@@ -14,8 +14,8 @@ jobs:
   import:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: ./scripts/import-framer.sh
+      - uses: actions/checkout@v5
+      - run: bash scripts/import-framer.sh
       - name: Commit the export
         run: |
           git config user.name "github-actions[bot]"
