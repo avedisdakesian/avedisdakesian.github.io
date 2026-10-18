@@ -1,0 +1,25 @@
+name: Import from Framer
+
+# Run by hand from the Actions tab. Downloads the live Framer pages and their
+# images/videos/fonts and commits them to the branch it was run on.
+on:
+  workflow_dispatch:
+  push:
+    paths: [scripts/import-framer.sh]
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./scripts/import-framer.sh
+      - name: Commit the export
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add framer-export
+          git diff --cached --quiet || git commit -m "Import pages and assets from Framer"
+          git push
