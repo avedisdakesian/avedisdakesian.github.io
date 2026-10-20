@@ -1,0 +1,49 @@
+# Checks the YouTube channel for new uploads and adds them to the top of
+# "UX Talks" on the home page. Runs every 3 hours, or by hand from the
+# Actions tab ("Update YouTube videos" -> "Run workflow").
+name: Update YouTube videos
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - scripts/update-talks.py
+      - .github/workflows/update-talks.yml
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: update-talks
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # On a pull request, only show what would happen.
+      - name: Check (dry run)
+        if: github.event_name == 'pull_request'
+        run: python3 scripts/update-talks.py --dry-run
+
+      - name: Add new videos
+        if: github.event_name != 'pull_request'
+        run: python3 scripts/update-talks.py
+
+      - name: Commit and publish
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet; then echo "No new videos."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Add new YouTube video to UX Talks"
+          git push
+          # Pushes made by this workflow don't always start a Pages build, so ask for one.
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true

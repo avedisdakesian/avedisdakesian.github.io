@@ -17,7 +17,8 @@ const PLAY_ICON =
 
 document.querySelectorAll('.yt[data-yt]').forEach((el) => {
   const id = el.dataset.yt;
-  const title = el.dataset.title || 'YouTube video';
+  const title = (el.dataset.title || 'YouTube video')
+    .replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
   el.innerHTML =
     `<img src="https://i.ytimg.com/vi_webp/${id}/maxresdefault.webp" alt="" loading="lazy" decoding="async">` +
     `<button type="button" aria-label="Play: ${title}">${PLAY_ICON}</button>`;
