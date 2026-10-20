@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avedis. Second Caller</title>
+  <meta name="description" content="Case study: redesigning the iPhone second-call screen so people stay calm and in control.">
+  <meta property="og:title" content="Avedis. Second Caller">
+  <meta property="og:description" content="Case study: redesigning the iPhone second-call screen.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://avedisdakesian.github.io/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+</head>
+<body>
+<div class="case">
+  <div class="container">
+
+    <header class="case-header">
+      <div class="case-header__card">
+        <div class="case-header__titles">
+          <a class="case-header__back" href="../">← Back</a>
+          <h1 class="case-header__title">Second Caller</h1>
+        </div>
+        <p class="case-header__about">Thought about the biggest frustrations of many iOS users when receiving a second call. Based on <a href="https://developer.apple.com/design/human-interface-guidelines" target="_blank" rel="noopener">Apple's HIG ↗</a></p>
+      </div>
+    </header>
+
+    <main class="case-body">
+
+      <section class="sc-split">
+        <div class="sc-split__text">
+          <h2 class="sc-title">Overview</h2>
+          <div class="sc-text">
+            <p>After being approached by the support specialist, we wanted to understand wether this issue was a recurring pain-point amongst users, and to ensure we weren’t designing in vacuum, we wanted to see real world comments regarding the issue.</p>
+            <p>By starting our research process with direct user sentiment, we ensured that the redesign had its base in clearly acknowledging the real-world issue causing degraded usability in high-pressure, time-sensitive settings.</p>
+          </div>
+        </div>
+        <div class="layered" style="--ratio: 590 / 340; --x: 5.08%; --y: 20.29%; --w: 90%">
+          <img src="../assets/img/sc-overview-bg.webp" alt="" loading="lazy">
+          <img class="layered__top" src="../assets/img/sc-overview-comments.webp" alt="User comments complaining about the iPhone second-call screen" loading="lazy">
+        </div>
+      </section>
+
+      <section class="sc-split">
+        <div class="sc-split__text">
+          <h2 class="sc-title">PM Defined Business Goals</h2>
+          <div class="sc-text">
+            <p>The product manager was responsible to quickly draft business goals that need to be addressed with the design process.  During this, I collaborated with the PM on different stages.</p>
+          </div>
+        </div>
+        <div class="layered" style="--ratio: 590 / 340; --x: 9.66%; --y: 9.41%; --w: 80.85%">
+          <img src="../assets/img/sc-goals-bg.webp" alt="" loading="lazy">
+          <img class="layered__top" src="../assets/img/sc-goals.webp" alt="Business goals: reduce call drops caused by user confusion, improve satisfaction for multi-call handling experience, deliver a minimum delightful product within 2 weeks" loading="lazy">
+        </div>
+      </section>
+
+      <section class="sc-full">
+        <div class="sc-full__text">
+          <h2 class="sc-title">Competitor Analysis</h2>
+          <div class="sc-text">
+            <p>With the problem validated we felt comfortable enough to move to the deeper research to examine how competitor handle second call scenarios. Our goal here was not only to map out the different features that others offered, but to extract design principles that would aid in the future solution for the iOS second call screen in the ideation phase.</p>
+            <p>Although the data shows that iOS is the mostly used OS in the USA, Android is not that far behind, moreover, globally, Android users exceed iOS users substantially. This doesn’t necessarily mean that the solution to this issue is addressed better within the Android OS, but we should definitely have a look and investigate their flow for a better understanding overall.</p>
+          </div>
+        </div>
+        <div class="layered" style="--ratio: 1108 / 500; --x: 17.69%; --y: 8.2%; --w: 64.71%">
+          <img src="../assets/img/sc-purple-bg.webp" alt="" loading="lazy">
+          <img class="layered__top" src="../assets/img/sc-os-share.webp" alt="Mobile operating system use in the United States and worldwide" loading="lazy">
+        </div>
+        <div class="sc-text">
+          <p>After investigating what each competitor offers in times of receiving the second call, it was evident that we had to measure their performance on some key aspects to clearly see the things that are handled effectively and the aspects that still can be improved. These insights will weigh in later, when we start thinking of solutions to improve our current iOS screen</p>
+        </div>
+        <div class="layered" style="--ratio: 1108 / 560; --x: 17.69%; --y: 12.68%; --w: 64.71%">
+          <img src="../assets/img/sc-competitors-bg.webp" alt="" loading="lazy">
+          <img class="layered__top" src="../assets/img/sc-competitors.webp" alt="Competitor comparison of second-call screens" loading="lazy">
+        </div>
+      </section>
+
+      <section class="sc-split">
+        <div class="sc-split__text">
+          <h2 class="sc-title">Spider Chart<br>for Stakeholders</h2>
+          <div class="sc-text">
+            <p>Getting a visual representation of the competitor analysis that sums up the overall state of the iOS solution when compared to other Android solutions in the market used daily</p>
+            <p>With this spider chart, we were able to communicate the results of our competitor analysis more visually which helps us communicate our findings to other stakeholders and product people.</p>
+          </div>
+        </div>
+        <div class="layered" style="--ratio: 590 / 391; --x: 28.98%; --y: 7.93%; --w: 64.24%">
+          <img src="../assets/img/sc-purple-bg.webp" alt="" loading="lazy">
+          <img class="layered__top" src="../assets/img/sc-spider-chart.webp" alt="Spider chart comparing iOS, Nothing and Huawei second-call handling" loading="lazy">
+          <ul class="legend">
+            <li style="--dot: #ff928a">iOS</li>
+            <li style="--dot: #8979ff">Nothing (Android)</li>
+            <li style="--dot: #43de3b">Huawei (Android)</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sc-split">
+        <div class="sc-split__text">
+          <h2 class="sc-title">Design Heuristics for a Second Caller</h2>
+          <div class="sc-text">
+            <p>All this competitor analysis comes to an end we had a few global heuristics that were clearly evident, and in terms of involving other teams when presenting how we got to the solution, these heuristics are the main points to articulate</p>
+          </div>
+        </div>
+        <img class="rounded" src="../assets/img/sc-heuristics.webp" alt="Design heuristics for a second caller" loading="lazy" width="1180" height="680">
+      </section>
+
+      <section class="sc-split">
+        <div class="sc-split__text">
+          <h2 class="sc-title">Understanding<br>The User</h2>
+          <div class="sc-text">
+            <p>In the second stage, we conducted a real world, qualitative user research with two participants (Mom, and Wife) to better understand their behaviors, pain points, and expectations when receiving their second call. We decided not to do an empathy map since it’s value emerges with larger data sets, and instead have grouped their answers into an affinity diagram with their respective themes.</p>
+          </div>
+        </div>
+        <img class="rounded" src="../assets/img/sc-understanding.webp" alt="User interview notes" loading="lazy" width="1180" height="680">
+      </section>
+
+      <section class="sc-split">
+        <div class="sc-split__text">
+          <h2 class="sc-title">Creating an Affinity Diagram</h2>
+          <div class="sc-text">
+            <p>With all the real world insights from the two user interviews we did, and with this affinity diagram, we felt confident to move to the last stage of the research plan, which was to create a persona that depicts the users we have been working with, and to formulate a problem statement that will be our main focus in the coming stages.</p>
+          </div>
+        </div>
+        <img class="rounded" src="../assets/img/sc-affinity.webp" alt="Affinity diagram" loading="lazy" width="1180" height="680">
+      </section>
+
+      <section class="sc-full">
+        <div class="sc-full__text">
+          <h2 class="sc-title">Persona &amp; Problem Statement</h2>
+          <div class="sc-text">
+            <p>With all the real world insights from the two user interviews we did, and with this affinity diagram, we felt confident to move to the last stage of the research plan, which was to create a persona that depicts the users we have been working with, and to formulate a problem statement that will be our main focus in the coming stages.</p>
+            <p>We didn’t do any of the fake additions in the time that we had. Keeping in mind that we needed a solution that was an MVP and could be delivered quickly, we created a lean persona that summed up our research and helped us frame the problems we were facing.</p>
+          </div>
+        </div>
+        <div class="layered" style="--ratio: 1108 / 500; --x: 17.69%; --y: 9.8%; --w: 64.71%">
+          <img src="../assets/img/sc-persona-bg.webp" alt="" loading="lazy">
+          <img class="layered__top" src="../assets/img/sc-persona.webp" alt="Lean persona" loading="lazy">
+        </div>
+        <p class="callout">iPhone users who receive multiple calls at the same time often feel panic and frustration, because the second call screen is structured in a way that leads to mistakes and unintended actions.</p>
+      </section>
+
+      <section class="sc-split">
+        <div class="sc-split__text">
+          <h2 class="sc-title">Ideation Kick-Off!</h2>
+          <div class="sc-text">
+            <p>With solid research complete and alignment of all findings with the product, it was time to take into consideration that work, and start the ideation process.</p>
+            <p>To remind us of what are the things to focus on, we put at the top of our drawing boards the design heuristics form the competitor analysis, the design success goals, and the problem statement. By doing this, we always had in front of us, in plain sight, the key guiding points of the research process.</p>
+          </div>
+        </div>
+        <img class="rounded" src="../assets/img/sc-ideation.webp" alt="Ideation board" loading="lazy" width="1180" height="681">
+      </section>
+
+      <section class="sc-full">
+        <div class="sc-full__text">
+          <h2 class="sc-title">Paper Wireframes</h2>
+          <div class="sc-text">
+            <p>With all the real world insights from the two user interviews we did, and with this affinity diagram, we felt confident to move to the last stage of the research plan, which was to create a persona that depicts the users we have been working with, and to formulate a problem statement that will be our main focus in the coming stages.</p>
+            <p>We didn’t do any of the fake additions in the time that we had. Keeping in mind that we needed a solution that was an MVP and could be delivered quickly, we created a lean persona that summed up our research and helped us frame the problems we were facing.</p>
+          </div>
+        </div>
+        <div class="wireframes">
+          <article class="wf-card">
+            <div class="wf-card__sketch"><img src="../assets/img/sc-sketch-1.webp" alt="Paper wireframe: split screen with both callers" loading="lazy" style="--x: -42.93%; --y: -33.24%; --w: 171.2%"></div>
+            <div class="wf-card__notes">
+              <h4>Pros</h4>
+              <ul><li>Sees both callers</li><li>Does not lose functionalities of the old caller</li></ul>
+              <h4>Cons</h4>
+              <ul><li>Too many buttons increase cognitive load</li><li>No Clear Primary Caller</li><li>Unnatural division, makes user to “pick a side”</li><li>Not in sync with the iOS’s one-caller-primary pattern</li></ul>
+              <h4>Heuristics</h4>
+              <ul class="wf-card__chips"><li class="chip chip--clarity">Caller Clarity</li></ul>
+            </div>
+          </article>
+          <article class="wf-card">
+            <div class="wf-card__sketch"><img src="../assets/img/sc-sketch-2.webp" alt="Paper wireframe: both callers listed with shared controls" loading="lazy" style="--x: -1.57%; --y: -2.95%; --w: 106.8%"></div>
+            <div class="wf-card__notes">
+              <h4>Pros</h4>
+              <ul><li>Sees both callers</li><li>Cleaner layout than splitting the screen</li><li>Call controls stay in the same zone always</li></ul>
+              <h4>Cons</h4>
+              <ul><li>Sees controls only related to the old “current” caller, until choosing the new caller</li><li>Primary/Secondary hierarchy is unclear</li><li>Users wouldn’t know what controls does the new caller have until tapping on them</li><li>Not in sync with the iOS’s one-caller-primary pattern</li></ul>
+              <h4>Heuristics</h4>
+              <ul class="wf-card__chips"><li class="chip chip--clarity">Caller Clarity</li><li class="chip chip--consistency">Consistency Across States</li></ul>
+            </div>
+          </article>
+          <article class="wf-card">
+            <div class="wf-card__sketch"><img src="../assets/img/sc-sketch-3.webp" alt="Paper wireframe: new caller sheet over the current call" loading="lazy" style="--x: -72.77%; --y: -54.96%; --w: 235.08%"></div>
+            <div class="wf-card__notes">
+              <h4>Pros</h4>
+              <ul><li>Sees both callers</li><li>Binary choice</li><li>In sync with the iOS’s one-caller-primary pattern</li><li>Familiar UI (Same as one call)</li></ul>
+              <h4>Cons</h4>
+              <ul><li>No Flexibility - No option of “End &amp; Accept” and “Hold &amp; Accept”</li></ul>
+              <h4>Heuristics</h4>
+              <ul class="wf-card__chips"><li class="chip chip--clarity">Caller Clarity</li><li class="chip chip--hierarchy">Simple Action Hierarchy</li><li class="chip chip--consistency">Consistency Across States</li></ul>
+            </div>
+            <svg class="wf-card__star" viewBox="0 0 20 20" aria-label="Chosen"><path fill="#ED5153" d="M8.77579 2.32486C9.01356 1.59309 10.0488 1.59309 10.2866 2.32485L11.4927 6.03706C11.5991 6.36432 11.904 6.58589 12.2481 6.58589L16.1514 6.58589C16.9208 6.58589 17.2407 7.57047 16.6182 8.02273L13.4604 10.317C13.1821 10.5192 13.0656 10.8778 13.1719 11.205L14.3781 14.9172C14.6158 15.649 13.7783 16.2575 13.1558 15.8052L9.99804 13.511C9.71966 13.3087 9.34271 13.3087 9.06433 13.511L5.90654 15.8052C5.28406 16.2575 4.44652 15.649 4.68429 14.9172L5.89045 11.205C5.99679 10.8778 5.8803 10.5193 5.60192 10.317L2.44413 8.02273C1.82165 7.57047 2.14156 6.58589 2.91099 6.58589L6.81423 6.58589C7.15833 6.58589 7.46329 6.36432 7.56962 6.03706L8.77579 2.32486Z"/></svg>
+          </article>
+          <article class="wf-card">
+            <div class="wf-card__sketch"><img src="../assets/img/sc-sketch-4.webp" alt="Paper wireframe: new caller full screen with old caller minimised" loading="lazy" style="--x: -63.35%; --y: -30.29%; --w: 201.57%"></div>
+            <div class="wf-card__notes">
+              <h4>Pros</h4>
+              <ul><li>Sees both callers</li><li>Binary choice</li><li>In sync with the iOS’s one-caller-primary pattern</li><li>Familiar UI (Same as one call)</li></ul>
+              <h4>Cons</h4>
+              <ul><li>No Flexibility - No option of “End &amp; Accept” and “Hold &amp; Accept”</li><li>Not in sync with the iOS design language</li></ul>
+              <h4>Heuristics</h4>
+              <ul class="wf-card__chips"><li class="chip chip--clarity">Caller Clarity</li><li class="chip chip--hierarchy">Simple Action Hierarchy</li></ul>
+            </div>
+            <svg class="wf-card__star" viewBox="0 0 20 20" aria-label="Chosen"><path fill="#ED5153" d="M8.77579 2.32486C9.01356 1.59309 10.0488 1.59309 10.2866 2.32485L11.4927 6.03706C11.5991 6.36432 11.904 6.58589 12.2481 6.58589L16.1514 6.58589C16.9208 6.58589 17.2407 7.57047 16.6182 8.02273L13.4604 10.317C13.1821 10.5192 13.0656 10.8778 13.1719 11.205L14.3781 14.9172C14.6158 15.649 13.7783 16.2575 13.1558 15.8052L9.99804 13.511C9.71966 13.3087 9.34271 13.3087 9.06433 13.511L5.90654 15.8052C5.28406 16.2575 4.44652 15.649 4.68429 14.9172L5.89045 11.205C5.99679 10.8778 5.8803 10.5193 5.60192 10.317L2.44413 8.02273C1.82165 7.57047 2.14156 6.58589 2.91099 6.58589L6.81423 6.58589C7.15833 6.58589 7.46329 6.36432 7.56962 6.03706L8.77579 2.32486Z"/></svg>
+          </article>
+        </div>
+      </section>
+
+      <section class="sc-full">
+        <div class="sc-full__text">
+          <h2 class="sc-title">Low Fidelity Idea #1</h2>
+          <div class="sc-text">
+            <p>Two solutions were chosen as the contenders that would move forward to the LoFi wireframe stage. In this stage we would created those ideas in a bit more details, understanding the user’s flow in a few screens. Ideally one of the contenders would move to the UI stage to be finalized and handed off to development.</p>
+          </div>
+        </div>
+        <img class="rounded" src="../assets/img/sc-lofi-1.webp" alt="Low fidelity flow: a sheet slides up over the current call" loading="lazy" width="2216" height="1352">
+        <div class="captions">
+          <p>Here’s the standard iOS screen when a user is on a standard call. They have their main action button to End the call, and other secondary buttons that are not relevant in this study.</p>
+          <p>When they receive a second call, a sheet slides up from the button highlighting the second caller by casting an overlay on the main screen under it. The sheet covers up all actions related to the current caller hence concentrating the user on the task at hand: answer or decline the upcoming call.</p>
+          <p>If the user answers the call, the first caller is put on hold and the call is minimized at the top. The card hints the user that the first call is on hold and has a chip for the user to end it at any time. The second call now takes the entirety of the screen and becomes the new focus of the user.<br><br>If the second call is declined, the user goes back to the first screen.</p>
+        </div>
+        <hr class="rule">
+        <div class="heuristics">
+          <div class="heuristics__card heuristics__heading"><h3>Design Heuristics Evaluation</h3></div>
+          <div class="heuristics__card"><h3>Prioritize Caller Clarity</h3><p>This option clearly articulates the first and the second caller at the appropriate time, always articulating to the user with which caller they are interacting with.</p></div>
+          <div class="heuristics__card"><h3>Simple Action Hierarchy</h3><p>The actions in this flow remain simple and do not cause any cognitive load to the user. Although the first caller has 6 action buttons, the sheet that comes up with the second caller, hides all of that and proposes 2 simple actions.</p></div>
+          <div class="heuristics__card"><h3>Action Unification</h3><p>In this case we use iOS’s native “Accept” and “Decline” buttons, as creating a new unified component at this stage is not appropriate to do, since we have a strict deadline and an MVP is expected.</p></div>
+          <div class="heuristics__card"><h3>Consistency Across States</h3><p>The use of the sheet that slides up, has a layout that is almost identical to the incoming call when a phone is unlocked, meaning that the familiar elements in their usual places ensures a quick response</p></div>
+          <div class="heuristics__card"><h3>Support Expectations</h3><p>This flow behaves as user expect it in terms of putting on hold the current call to answer the second one, which is the primary flow of Android, as well as Landline. However users also expect an option to end the current and answer the new call, which is missing in this solution</p></div>
+        </div>
+        <hr class="rule">
+        <div class="summary">
+          <h3>Summary</h3>
+          <p>This solution leverages sheets that slide over the existing UI to focus the user’s attention on the second caller. It simplifies the decision to a clear binary choice, which supports speed and clarity. However, by using the entire screen more effectively, we could also support the “End &amp; Accept” option — a secondary but important action for many users. Addressing this need in the next iteration will help us balance simplicity with flexibility, and strengthen the overall solution.</p>
+        </div>
+      </section>
+
+      <section class="sc-full">
+        <div class="sc-full__text">
+          <h2 class="sc-title">Low Fidelity Idea #2</h2>
+          <div class="sc-text">
+            <p>Two solutions were chosen as the contenders that would move forward to the LoFi wireframe stage. In this stage we would created those ideas in a bit more details, understanding the user’s flow in a few screens. Ideally one of the contenders would move to the UI stage to be finalized and handed off to development.</p>
+          </div>
+        </div>
+        <img class="rounded" src="../assets/img/sc-lofi-2.webp" alt="Low fidelity flow: one primary caller, the other minimised into the Dynamic Island" loading="lazy" width="2216" height="3248">
+        <div class="heuristics">
+          <div class="heuristics__card heuristics__heading"><h3>Design Heuristics Evaluation</h3></div>
+          <div class="heuristics__card"><h3>Prioritize Caller Clarity</h3><p>Although two callers may exist, only one is always the primary focus. The other is minimized into the Dynamic Island, reducing confusion and preventing split attention.</p></div>
+          <div class="heuristics__card"><h3>Simple Action Hierarchy</h3><p>The solution reuses the same UI patterns users already know from single-call and incoming-call screens. This ensures smooth transitions and builds on muscle memory.</p></div>
+          <div class="heuristics__card"><h3>Action Unification</h3><p>Incoming second calls present three clear options, structured into primary (“Hold &amp; Accept,” “Decline”) and secondary (“End &amp; Accept”). The hierarchy keeps actions predictable and reduces cognitive load.</p></div>
+          <div class="heuristics__card"><h3>Consistency Across States</h3><p>The design leverages iOS’s native buttons for “Accept” and “Decline” to meet MVP constraints and ensure speed of delivery. A new unified control could be explored in a future iteration.</p></div>
+          <div class="heuristics__card"><h3>Support Expectations</h3><p>The flow mirrors real-world calling behavior and platform conventions: answering one call puts the other on hold, while secondary controls remain accessible in the Dynamic Island. This aligns with user mental models</p></div>
+        </div>
+        <hr class="rule">
+        <div class="summary">
+          <h3>Summary</h3>
+          <p>This solution prioritizes clarity by always keeping one caller as the user’s primary focus at all times, and minimizes the other into the Dynamic Island to reduce confusion. Using familiar iOS call screens and patterns ensure consistency and quick action. The actions are split into primary – “Hold &amp; Accept” and “Decline” and a secondary – “End &amp; Accept” which covers user’s needs. The flow supports user expectations by mirroring real-world calling behavior and platform conventions: answering one call automatically places the other on hold, with secondary actions still accessible. Finally, by leveraging native iOS components, the design delivers an MVP-ready solution quickly, while leaving space to refine unified controls in future iterations.</p>
+        </div>
+      </section>
+
+      <section class="sc-full">
+        <div class="sc-full__text">
+          <h2 class="sc-title">UI &amp; Prototyping</h2>
+          <div class="sc-text">
+            <p>After careful consideration and revision of the lofi wireframes, we came to the conclusion that the second option provided more value to our users, and targeted each and every one of the design heuristics, and took into consideration the problem statement</p>
+            <p>To kick off the UI, we used our own Figma UI Kit, to keep everything consistent with the Apple language, and to have a swift transition into development. Although our UI Kit provides the guidelines and the atomic components, we had to create case-specific components to show visually what the solution components are, and to prototype to as real-life as possible with Figma.</p>
+          </div>
+        </div>
+        <video class="rounded" src="../assets/video/second-caller-prototype.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      </section>
+
+      <section class="sc-full">
+        <div class="sc-full__text">
+          <h2 class="sc-title">Final Notes</h2>
+          <div class="sc-text">
+            <p>This concludes this case study that was meant to provide a quick solution for the second caller screen, of course when implementing solutions like this, all other products of the ecosystem at Apple should be taken into consideration, however for this case study, our main focus was the iPhone.</p>
+            <p>Hope you liked this case study and if there are any questions feel free to contact me!</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>

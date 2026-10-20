@@ -1,6 +1,38 @@
 # avedisdakesian.github.io
 
-Avedis Dakesian's portfolio site, moved off Framer. Plain HTML and CSS, hosted on GitHub Pages.
+Avedis Dakesian's portfolio, moved off Framer. Plain HTML and CSS with a few lines of JavaScript. No build step: what's in this repo is exactly what the site serves.
 
-`framer-export/` holds a one-time copy of the original Framer pages and their images, made by the
-"Import from Framer" GitHub Action (`scripts/import-framer.sh`).
+## Pages
+
+| Page | File |
+| --- | --- |
+| Home | `index.html` |
+| Second Caller case study | `second-caller/index.html` |
+| Woods Center case study | `woods-center/index.html` |
+
+## Editing
+
+- **Text:** edit the HTML file for that page.
+- **Max width:** `--max-width` at the top of `assets/css/base.css` (1140px, the same as the Framer site). Every page uses it.
+- **Colours and spacing:** `assets/css/base.css` (shared), `assets/css/home.css` (home), `assets/css/case-study.css` (both case studies).
+- **Flipping titles under the name:** the list is in `index.html` (`hero__roles`); timing is the `roles` animation in `home.css`. If you add or remove a title, update the keyframe steps too.
+- **Images:** `assets/img`. `scripts/optimize-images.py` made them from the full-size originals in `framer-export/assets`.
+- **Videos:** `assets/video`.
+
+Layout switches to the phone version below 1220px wide, the same breakpoint Framer used.
+
+## Preview locally
+
+```sh
+python3 -m http.server 8000
+```
+
+Then open http://localhost:8000.
+
+## Hosting
+
+GitHub Pages serves the `main` branch (Settings → Pages → Deploy from a branch → `main`, `/ (root)`). The site lives at https://avedisdakesian.github.io. A custom domain can be added on the same settings page.
+
+## framer-export/
+
+A one-time copy of the original Framer pages and their full-size images, made by `scripts/import-framer.sh`. Kept as the source for the images and for reference; the site doesn't load anything from it.

@@ -1,0 +1,343 @@
+/* Case study pages (Second Caller, Woods Center).
+   Desktop values first; the phone layout (below 1220px) is at the bottom of each block. */
+
+.case {
+  --accent: #8c00f0;          /* link colour, set per page */
+  --title: #282828;
+  --text: rgba(4, 7, 7, 0.5);
+  --card-border: #f3f3f3;
+  --section-gap: 40px;
+  --inset: 16px;              /* sections sit 16px in from the header card */
+  color: var(--title);
+}
+.case .container { --gutter: 40px; padding-bottom: 40px; }
+@media (max-width: 1219.98px) {
+  .case .container { --gutter: 12px; }
+}
+
+/* ---------- Sticky header card ---------- */
+.case-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding-top: 40px;
+  background: var(--page-bg, #fff);
+}
+.case-header__card {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.05);
+}
+.case-header__titles { display: flex; flex-direction: column; gap: 8px; }
+.case-header__back { font-size: 14px; line-height: 16.8px; font-weight: 600; color: var(--accent); }
+.case-header__back:hover { text-decoration: underline; }
+.case-header__title { font-size: 24px; line-height: 28.8px; font-weight: 600; color: var(--title); }
+.case-header__about { max-width: 398px; font-size: 14px; line-height: 25px; color: rgba(40, 40, 40, 0.8); }
+.case-header__about a { margin-left: 4px; color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+.case-header__about a:hover { color: #08f; }
+
+.case-body { display: flex; flex-direction: column; gap: var(--section-gap); padding: 40px var(--inset) 0; }
+
+.case img, .case video { width: 100%; height: auto; }
+
+@media (max-width: 1219.98px) {
+  .case-header { padding-top: 24px; }
+  .case-header__card { flex-direction: column; align-items: flex-start; }
+  .case-header__titles { flex-direction: row; align-items: center; gap: 16px; }
+  .case-header__title { display: none; }
+  .case-header__about { max-width: none; font-size: 12px; line-height: 18px; }
+}
+
+/* =================================================================
+   Second Caller
+   ================================================================= */
+
+.sc-title { max-width: 312px; font-size: 32px; line-height: 38.4px; font-weight: 700; color: var(--title); }
+.sc-text { display: flex; flex-direction: column; gap: 8px; }
+.sc-text p { font-size: 16px; line-height: 24px; color: var(--text); }
+
+/* Text on the left, picture on the right */
+.sc-split {
+  display: grid;
+  grid-template-columns: 462fr 590fr;
+  gap: 56px;
+  align-items: start;
+}
+.sc-split__text { display: flex; flex-direction: column; gap: 16px; padding-top: 24px; }
+
+/* Text across the top, picture full width below */
+.sc-full { display: flex; flex-direction: column; gap: 24px; }
+.sc-full__text { display: flex; flex-direction: column; gap: 16px; padding: 24px 4px 0; }
+.sc-full__text .sc-title { max-width: none; }
+.sc-full__text .sc-text { max-width: 990px; }
+.sc-full > .sc-text { max-width: 997px; }
+
+/* A picture with a second picture laid on top (positions copied from Framer, in % of the box) */
+.layered {
+  position: relative;
+  aspect-ratio: var(--ratio);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.layered > img:first-child { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.layered > .layered__top {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--w);
+  height: auto;
+}
+.rounded { border-radius: 16px; overflow: hidden; }
+video.rounded { aspect-ratio: 1108 / 620; object-fit: cover; background: #f3f3f3; }
+
+/* Spider chart legend */
+.legend {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 9.86px;
+  line-height: 11.8px;
+  color: #fff;
+}
+.legend li { display: flex; align-items: center; gap: 5.6px; }
+.legend li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--dot); }
+
+/* Problem statement callout */
+.callout {
+  padding: 24px 24px 32px;
+  border: 1px solid var(--accent);
+  border-radius: 16px;
+  background: #fff;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Paper wireframes: four cards on a gradient */
+.wireframes {
+  display: grid;
+  grid-template-columns: repeat(2, 399px);
+  justify-content: center;
+  gap: 13px;
+  padding: 54px 16px;
+  border-radius: 16px;
+  background: url("../img/sc-wireframes-bg.webp") center / cover no-repeat;
+}
+.wf-card {
+  position: relative;
+  display: flex;
+  gap: 19px;
+  height: 386px;
+  padding: 6px;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 3.2px 3.2px 11px rgba(0, 0, 0, 0.05);
+}
+.wf-card__sketch {
+  position: relative;
+  flex: none;
+  width: 191px;
+  height: 373px;
+  overflow: hidden;
+}
+.wf-card__sketch img {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--w);
+  max-width: none;
+}
+.wf-card__notes { padding-top: 12px; padding-right: 8px; font-size: 9.53px; line-height: 12.71px; color: rgba(0, 0, 0, 0.7); }
+.wf-card__notes h4 { margin: 12px 0 6px; font-size: 11.12px; font-weight: 600; color: #040707; }
+.wf-card__notes h4:first-child { margin-top: 0; }
+.wf-card__notes ul { display: flex; flex-direction: column; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.wf-card__chips { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin: 0; padding: 0 0 0 0; list-style: none; }
+.chip {
+  padding: 4px 12.7px;
+  border-radius: 79px;
+  font-size: 9.53px;
+  line-height: 11.4px;
+  color: #040707;
+}
+.chip--clarity { background: rgba(255, 115, 224, 0.3); }
+.chip--hierarchy { background: rgba(0, 197, 82, 0.3); }
+.chip--consistency { background: rgba(255, 152, 9, 0.3); }
+.wf-card__star { position: absolute; top: 9px; right: 9px; width: 20px; height: 20px; }
+
+/* Three captions under the low-fi flow */
+.captions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 0 12px; }
+.captions p { max-width: 270px; font-size: 16px; line-height: 24px; color: var(--text); }
+
+.rule { height: 1px; border: 0; margin: 0; background: rgba(129, 131, 131, 0.1); }
+
+/* Design heuristics evaluation */
+.heuristics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.heuristics__card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 260px;
+  padding: 16px;
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 0.6px 0.6px -1.25px rgba(0, 0, 0, 0.11), 0 2.3px 2.3px -2.5px rgba(0, 0, 0, 0.1), 0 10px 10px -3.75px rgba(0, 0, 0, 0.04);
+}
+.heuristics__card h3 { font-size: 16px; line-height: 24px; font-weight: 600; color: #040707; }
+.heuristics__card p { font-size: 14px; line-height: 22px; color: var(--text); }
+.heuristics__heading {
+  align-items: center;
+  justify-content: center;
+}
+.heuristics__heading h3 { width: 265px; font-size: 40px; line-height: 48px; font-weight: 900; }
+
+.summary { display: flex; flex-direction: column; gap: 8px; max-width: 997px; }
+.summary h3 { font-size: 16px; line-height: 24px; font-weight: 600; color: #040707; }
+.summary p { font-size: 16px; line-height: 24px; color: var(--text); }
+
+.stack { display: flex; flex-direction: column; gap: 24px; }
+
+@media (max-width: 1219.98px) {
+  .sc-title { max-width: none; font-size: 24px; line-height: 28.8px; }
+  .sc-text p { font-size: 14px; line-height: 22px; }
+  .sc-split { grid-template-columns: 1fr; gap: 24px; }
+  .sc-split__text { padding-top: 0; }
+  .sc-full__text { padding: 0; }
+  .callout { padding: 16px; font-size: 16px; line-height: 26px; }
+
+  .wireframes { grid-template-columns: minmax(0, 399px); padding: 24px 12px; }
+  .wf-card { height: auto; gap: 12px; }
+  .wf-card__sketch { width: 42%; height: auto; aspect-ratio: 191 / 373; }
+
+  .captions { grid-template-columns: 1fr; padding: 0; }
+  .captions p { max-width: none; font-size: 14px; line-height: 22px; }
+  .heuristics { grid-template-columns: 1fr; }
+  .heuristics__card { min-height: 0; }
+  .heuristics__heading { padding: 32px 16px; }
+  .heuristics__heading h3 { width: auto; font-size: 32px; line-height: 40px; }
+  .summary p { font-size: 14px; line-height: 22px; }
+}
+
+/* =================================================================
+   Woods Center
+   ================================================================= */
+
+/* Woods Center is set in Sora (only this page loads it) */
+@font-face {
+  font-family: "Sora";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 800;
+  src: url("../fonts/sora-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Sora";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 800;
+  src: url("../fonts/sora-latin-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+.case--woods {
+  --accent: #09f;
+  --page-bg: #eff6fd;
+  --section-gap: 64px;
+  --text: rgba(40, 40, 40, 0.6);
+}
+body.woods { background: #eff6fd; }
+.case--woods { font-family: "Sora", "Inter", system-ui, sans-serif; }
+.case--woods .case-body { padding-top: 32px; }
+.case--woods .case-header__titles { gap: 4px; }
+.case--woods .case-header__back { font-family: "Inter", system-ui, sans-serif; color: #ed5153; }
+
+.wc-section { display: flex; flex-direction: column; gap: 24px; }
+.wc-text { display: flex; flex-direction: column; gap: 8px; padding: 0 8px; }
+.wc-title { font-size: 20px; line-height: 24px; font-weight: 600; letter-spacing: 0.08em; color: #5c98da; }
+.wc-title--light { font-size: 14px; line-height: 16.8px; font-weight: 300; }
+.wc-text p { font-size: 16px; line-height: 24px; color: var(--text); }
+
+.wc-stack { display: flex; flex-direction: column; gap: 16px; }
+
+.card {
+  padding: 24px;
+  border-radius: 16px;
+  background: #fff;
+}
+.card--roomy { padding: 32px; }
+
+/* Information architecture: full map on the left, two zoomed-in crops on the right */
+.wc-architecture { display: grid; grid-template-columns: 570fr 522fr; gap: 16px; }
+.wc-architecture__zooms { display: grid; grid-template-rows: 1fr 1fr; gap: 16px; }
+.zoom { position: relative; overflow: hidden; }
+.zoom__frame { position: relative; height: 100%; overflow: hidden; }
+.zoom__frame img { position: absolute; left: var(--x); top: var(--y); width: var(--w); max-width: none; }
+
+.wc-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.wc-pair img { border-radius: 16px; }
+
+.wc-components { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.wc-components__right { display: flex; flex-direction: column; gap: 16px; }
+.wc-components img { border-radius: 8px; }
+
+.wc-phones { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.wc-phones img { border-radius: 16px; }
+
+.wc-video { border-radius: 16px; overflow: hidden; aspect-ratio: var(--ratio); }
+.wc-video video { width: 100%; height: 100%; object-fit: cover; }
+
+.wc-components-card img { border-radius: 8px; }
+
+/* Bento rows: three orange cards, each with a screenshot placed on top (positions from Framer) */
+.bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.bento__card {
+  position: relative;
+  height: 399px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+.bento__card img {
+  position: absolute;
+  left: var(--l);
+  top: var(--t);
+  width: var(--w);
+  max-width: none;
+}
+
+@media (max-width: 1219.98px) {
+  .case--woods { --section-gap: 40px; }
+  .wc-title { font-size: 18px; line-height: 21.6px; }
+  .wc-title--light { font-size: 18px; line-height: 21.6px; }
+  .wc-text p { font-size: 14px; line-height: 22px; }
+
+  .card { padding: 8px; }
+  .card--roomy { padding: 8px; border-radius: 8px; }
+  .card--map { padding: 24px; }
+
+  .wc-architecture { grid-template-columns: 1fr; }
+  .wc-architecture__zooms { display: none; }
+  .wc-pair { grid-template-columns: 1fr; gap: 8px; }
+  .wc-components { display: flex; flex-direction: column-reverse; }
+  .wc-phones img { border-radius: 8px; }
+
+  .wc-video { aspect-ratio: var(--ratio-phone, var(--ratio)); }
+
+  .bento { grid-template-columns: 1fr; }
+  .bento__card { height: var(--phone-h, 270px); }
+  .bento__card img { left: var(--ml, var(--l)); top: var(--mt, var(--t)); width: var(--mw, var(--w)); }
+}
