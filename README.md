@@ -7,14 +7,17 @@ Avedis Dakesian's portfolio, moved off Framer. Plain HTML and CSS with a few lin
 | Page | File |
 | --- | --- |
 | Home | `index.html` |
+| About | `about/index.html` |
+| Services | `services/index.html` |
 | Second Caller case study | `second-caller/index.html` |
 | Woods Center case study | `woods-center/index.html` |
 
 ## Editing
 
-- **Text:** edit the HTML file for that page.
+- **Text:** edit the HTML file for that page. The About and Services pages have placeholder text, experience and prices; replace them with your own.
+- **Navigation:** the menu links are repeated at the top of each page (`nav__items` for desktop, `phone-nav__menu` for phone).
 - **Max width:** `--max-width` at the top of `assets/css/base.css` (1140px, the same as the Framer site). Every page uses it.
-- **Colours and spacing:** `assets/css/base.css` (shared), `assets/css/home.css` (home), `assets/css/case-study.css` (both case studies).
+- **Colours and spacing:** `assets/css/base.css` (shared), `assets/css/home.css` (home, plus the nav, contact and footer used everywhere), `assets/css/pages.css` (About and Services), `assets/css/case-study.css` (both case studies).
 - **Flipping titles under the name:** the list is in `index.html` (`hero__roles`); timing is the `roles` animation in `home.css`. If you add or remove a title, update the keyframe steps too.
 - **Images:** `assets/img`. `scripts/optimize-images.py` made them from the full-size originals in `framer-export/assets`.
 - **Videos:** `assets/video`.

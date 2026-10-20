@@ -54,3 +54,18 @@ document.querySelectorAll('[data-scroller]').forEach((box) => {
   window.addEventListener('resize', update);
   update();
 });
+
+// Fade sections in as they scroll into view (About and Services pages)
+const reveals = document.querySelectorAll('.reveal');
+if (reveals.length) {
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    reveals.forEach((el) => io.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add('is-in'));
+  }
+}
