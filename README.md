@@ -18,7 +18,7 @@ Avedis Dakesian's portfolio, moved off Framer. Plain HTML and CSS with a few lin
 - **Flipping titles under the name:** the list is in `index.html` (`hero__roles`); timing is the `roles` animation in `home.css`. If you add or remove a title, update the keyframe steps too.
 - **Images:** `assets/img`. `scripts/optimize-images.py` made them from the full-size originals in `framer-export/assets`.
 - **Videos:** `assets/video`.
-- **UX Talks (YouTube):** new uploads on the channel are added to the top of the row automatically. The "Update YouTube videos" GitHub Action checks every 3 hours (or run it by hand from the Actions tab). It only adds videos published after the cutoff date in `scripts/update-talks.py`, skips Shorts, and never moves or removes existing cards. To remove or reorder a video, edit the `talks__list` in `index.html`.
+- **UX Talks (YouTube):** new uploads on the channel are added to the top of the row automatically. The "Update YouTube videos" GitHub Action checks once a week, on Mondays (or run it by hand from the Actions tab). It only adds videos published after the cutoff date in `scripts/update-talks.py`, skips Shorts, and never moves or removes existing cards. To remove or reorder a video, edit the `talks__list` in `index.html`.
 
 Layout switches to the phone version below 1220px wide, the same breakpoint Framer used.
 

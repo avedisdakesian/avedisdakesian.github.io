@@ -1,11 +1,11 @@
 # Checks the YouTube channel for new uploads and adds them to the top of
-# "UX Talks" on the home page. Runs every 3 hours, or by hand from the
+# "UX Talks" on the home page. Runs every Monday (09:17 UTC), or by hand from the
 # Actions tab ("Update YouTube videos" -> "Run workflow").
 name: Update YouTube videos
 
 on:
   schedule:
-    - cron: "17 */3 * * *"
+    - cron: "17 9 * * 1"
   workflow_dispatch:
   pull_request:
     paths:
