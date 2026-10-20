@@ -21,6 +21,27 @@
 .nav__item:hover { color: var(--ink); }
 .nav__item.is-active { color: var(--ink); box-shadow: inset 0 4px 0 var(--ink); }
 
+/* Download CV: black button at the end of the nav. Sits level with the nav text, which is pushed down by its 24px top padding. */
+.cv-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-end;
+  height: 38px;
+  margin: 0 0 -10px -8px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #000;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.cv-button svg { width: 16px; height: 16px; flex: none; }
+.cv-button:hover { background: var(--ink); transform: translateY(-1px); }
+
 /* ---------- Phone header (hidden on desktop) ---------- */
 .phone-nav { display: none; }
 
@@ -247,6 +268,9 @@
     height: 64px;
     padding: 0 10px 0 20px;
   }
+  .phone-nav__actions { display: flex; align-items: center; gap: 4px; }
+  .cv-button--small { align-self: auto; height: 34px; margin: 0; padding: 0 12px; font-size: 13px; gap: 6px; }
+  .cv-button--small svg { width: 14px; height: 14px; }
   .phone-nav__toggle {
     position: relative;
     width: 44px;
