@@ -14,7 +14,7 @@ Avedis Dakesian's portfolio, moved off Framer. Plain HTML and CSS with a few lin
 
 ## Editing
 
-- **Text:** edit the HTML file for that page. The About and Services pages have placeholder text, experience and prices; replace them with your own.
+- **Text:** edit the HTML file for that page. About uses the details from the CV. Services still has placeholder text and prices; replace them with your own.
 - **CV:** the Download CV button serves `assets/cv/Avedis-Dakesian-CV.pdf`. Replace that file with your CV (keep the same name).
 - **Navigation:** the menu links are repeated at the top of each page (`nav__items` for desktop, `phone-nav__menu` for phone).
 - **Max width:** `--max-width` at the top of `assets/css/base.css` (1140px, the same as the Framer site). Every page uses it.
