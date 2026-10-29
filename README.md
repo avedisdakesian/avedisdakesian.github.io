@@ -36,7 +36,21 @@ Then open http://localhost:8000.
 
 ## Hosting
 
-GitHub Pages serves the `main` branch (Settings → Pages → Deploy from a branch → `main`, `/ (root)`). The site lives at https://avedisdakesian.github.io. A custom domain can be added on the same settings page.
+GitHub Pages serves the `main` branch (Settings → Pages → Deploy from a branch → `main`, `/ (root)`). The site lives at https://avedis.design (set by the `CNAME` file and Settings → Pages → Custom domain). https://avedisdakesian.github.io redirects there.
+
+DNS at the domain registrar:
+
+| Type | Name | Value |
+| --- | --- | --- |
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| AAAA | @ | 2606:50c0:8000::153 |
+| AAAA | @ | 2606:50c0:8001::153 |
+| AAAA | @ | 2606:50c0:8002::153 |
+| AAAA | @ | 2606:50c0:8003::153 |
+| CNAME | www | avedisdakesian.github.io |
 
 ## framer-export/
 
