@@ -151,6 +151,57 @@
 .service__text { max-width: 520px; font-size: 16px; line-height: 1.6; color: var(--muted); }
 .service__tags { justify-content: flex-end; padding-top: 8px; }
 
+/* ---------- Services: main service (dark card) ---------- */
+.flagship {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 64px;
+  border-radius: 24px;
+  background:
+    radial-gradient(80% 120% at 85% 0%, rgba(155, 167, 183, 0.25) 0%, rgba(155, 167, 183, 0) 60%),
+    var(--ink);
+  color: #fff;
+}
+.flagship__head { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+.flagship__badge {
+  padding: 0 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.flagship__title { font-size: 56px; line-height: 1.12; font-weight: 800; letter-spacing: -0.02em; color: #fff; }
+.flagship__text { max-width: 640px; font-size: 20px; line-height: 32px; color: rgba(255, 255, 255, 0.75); }
+.flagship__kinds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 0; padding: 0; list-style: none; }
+.kind {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.kind:hover { transform: translateY(-4px); background: rgba(255, 255, 255, 0.08); }
+.kind__num { margin-bottom: 24px; font-size: 14px; line-height: 24px; font-weight: 600; color: rgba(255, 255, 255, 0.5); }
+.kind__title { font-size: 24px; line-height: 32px; font-weight: 700; color: #fff; }
+.kind__text { font-size: 16px; line-height: 1.6; color: rgba(255, 255, 255, 0.7); }
+.flagship__tags li { background: rgba(255, 255, 255, 0.08); color: rgba(255, 255, 255, 0.75); }
+
+/* ---------- Services: secondary list ---------- */
+.secondary { display: flex; flex-direction: column; gap: 24px; padding-top: 32px; }
+.secondary__title { font-size: 14px; line-height: 24px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--label); }
+.services--secondary .service { padding: 32px 0; }
+.services--secondary .service__num { line-height: 36px; }
+.services--secondary .service__title { font-size: 28px; line-height: 36px; }
+.services--secondary .service__tags { padding-top: 2px; }
+
 /* ---------- Process steps ---------- */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin: 0; padding: 0; list-style: none; }
 .step {
@@ -322,6 +373,22 @@
   .service__title { font-size: 24px; line-height: 32px; }
   .service__text { font-size: 14px; }
   .service__tags { justify-content: flex-start; padding-top: 4px; }
+
+  .flagship { gap: 32px; padding: 32px 20px; border-radius: 16px; }
+  .flagship__head { gap: 14px; }
+  .flagship__title { font-size: 30px; line-height: 38px; }
+  .flagship__text { font-size: 15px; line-height: 1.6; }
+  .flagship__kinds { grid-template-columns: 1fr; gap: 12px; }
+  .kind { gap: 8px; padding: 24px 20px; }
+  .kind__num { margin-bottom: 8px; font-size: 12px; }
+  .kind__title { font-size: 20px; line-height: 28px; }
+  .kind__text { font-size: 14px; }
+
+  .secondary { gap: 8px; padding-top: 16px; }
+  .secondary__title { font-size: 12px; }
+  .services--secondary .service { padding: 24px 0; }
+  .services--secondary .service__num { line-height: 24px; }
+  .services--secondary .service__title { font-size: 20px; line-height: 28px; }
 
   .steps { grid-template-columns: 1fr 1fr; gap: 32px 16px; }
   .step__title { font-size: 20px; line-height: 28px; }
